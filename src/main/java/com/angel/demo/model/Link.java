@@ -1,6 +1,9 @@
 package com.angel.demo.model;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.NonNull;
+import lombok.RequiredArgsConstructor;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -16,9 +19,22 @@ public class Link extends Auditable{
     @Id
     @GeneratedValue
     private long id;
+    @NonNull
     private String title;
+    @NonNull
     private String url;
 
     @OneToMany(mappedBy = "link")
-    List<Comment> comments = new ArrayList<>();
+    private List<Comment> comments = new ArrayList<>();
+
+    public Link(String title,String url)
+    {
+        this.title = title;
+        this.url = url;
+    }
+
+    public void addComment(Comment comment){
+        comments.add(comment);
+    }
+
 }

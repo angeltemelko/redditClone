@@ -1,6 +1,9 @@
 package com.angel.demo.model;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.NonNull;
+import lombok.RequiredArgsConstructor;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -14,9 +17,16 @@ public class Comment extends Auditable{
     @Id
     @GeneratedValue
     private long id;
+    @NonNull
     private String body;
 
     @ManyToOne
-    Link link;
+    @NonNull
+    private Link link;
+
+    public Comment(String body, Link link){
+        this.body = body;
+        this.link = link;
+    }
 
 }
