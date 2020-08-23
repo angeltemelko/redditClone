@@ -1,4 +1,4 @@
-package Repository;
+package com.angel.demo.Repository;
 
 import com.angel.demo.model.Vote;
 import org.springframework.data.jpa.repository.JpaRepository;

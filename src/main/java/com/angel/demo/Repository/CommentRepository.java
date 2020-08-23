@@ -1,8 +1,7 @@
-package Repository;
+package com.angel.demo.Repository;
 
-import org.attoparser.dom.Comment;
+import com.angel.demo.model.Comment;
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.data.jpa.repository.Query;
 
 public interface CommentRepository extends JpaRepository<Comment,Long> {
 
