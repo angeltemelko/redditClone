@@ -1,7 +1,7 @@
 package com.angel.demo;
 
-import Repository.CommentRepository;
-import Repository.LinkRepository;
+import com.angel.demo.Repository.CommentRepository;
+import com.angel.demo.Repository.LinkRepository;
 import com.angel.demo.model.Comment;
 import com.angel.demo.model.Link;
 import org.springframework.boot.CommandLineRunner;
