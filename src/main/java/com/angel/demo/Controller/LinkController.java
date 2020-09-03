@@ -13,9 +13,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import javax.validation.Valid;
 import java.util.Optional;
 
-/*
-@RequestMapping("/link")
-*/
+
 @Controller
 public class LinkController {
 
@@ -69,38 +67,4 @@ public class LinkController {
             return "redirect:/link/{id}";
         }
     }
-
-/*
-    LinkRepository linkRepository;
-
-    private LinkController(LinkRepository linkRepository){
-        this.linkRepository = linkRepository;
-    }*/
-
-   /* @GetMapping("/")
-    public List<Link> list(){
-        return linkRepository.findAll();
-    }
-
-    @PostMapping("/create")
-    public Link create(@ModelAttribute Link link){
-        return linkRepository.save(link);
-    }
-
-    @PutMapping("/update/{id}")
-    public Link update(@PathVariable long id, @ModelAttribute Link link){
-        return linkRepository.save(link);
-    }
-
-    @GetMapping("/read/{id}")
-    public Optional<Link> read(@PathVariable long id){
-        return linkRepository.findById(id);
-    }
-
-    @DeleteMapping("/delete/{id}")
-    public void delete(@PathVariable long id) {
-        linkRepository.deleteById(id);
-    }
-*/
-
 }
